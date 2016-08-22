@@ -27,21 +27,131 @@ public class Interfaz13 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        txtValor = new javax.swing.JTextField();
+        txtDias = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txtPers = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        cmdBOrrar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtValor.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 16)); // NOI18N
+        txtValor.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtValorKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 250, 130, -1));
+
+        txtDias.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 11)); // NOI18N
+        txtDias.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDiasKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 180, 70, -1));
+
+        jLabel3.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 11)); // NOI18N
+        jLabel3.setText("Numero de dias");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 11)); // NOI18N
+        jLabel2.setText("Numero de personas");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
+
+        txtPers.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 11)); // NOI18N
+        txtPers.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPersKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtPers, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 120, 70, -1));
+
+        jLabel4.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 16)); // NOI18N
+        jLabel4.setText("Valor");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Rage Italic", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel1.setText("Saravia");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 210, 50));
+
+        jLabel7.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 18)); // NOI18N
+        jLabel7.setText("Vacations");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 140, 20));
+
+        cmdBOrrar.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 11)); // NOI18N
+        cmdBOrrar.setForeground(new java.awt.Color(153, 0, 0));
+        cmdBOrrar.setText("Borrar");
+        cmdBOrrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdBOrrarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cmdBOrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, -1, -1));
+
+        jButton1.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 13)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 153, 0));
+        jButton1.setText("Calcular");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtValorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtValorKeyTyped
+        char c=evt.getKeyChar();
+
+        getToolkit().beep();
+
+        evt.consume();
+    }//GEN-LAST:event_txtValorKeyTyped
+
+    private void txtDiasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDiasKeyTyped
+        char c=evt.getKeyChar();
+
+        if(!Character.isDigit(evt.getKeyChar())){
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtDiasKeyTyped
+
+    private void txtPersKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPersKeyTyped
+        char c=evt.getKeyChar();
+
+        if(!Character.isDigit(evt.getKeyChar())){
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtPersKeyTyped
+
+    private void cmdBOrrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBOrrarActionPerformed
+        txtValor.setText("");
+        txtDias.setText("");
+        txtPelis.setText("");
+
+        txtPelis.requestFocusInWindow();
+    }//GEN-LAST:event_cmdBOrrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +189,16 @@ public class Interfaz13 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cmdBOrrar;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField txtDias;
+    private javax.swing.JTextField txtPers;
+    private javax.swing.JTextField txtValor;
     // End of variables declaration//GEN-END:variables
 }
