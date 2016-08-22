@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Jesus
@@ -101,6 +103,11 @@ public class Interfaz13 extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 13)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 153, 0));
         jButton1.setText("Calcular");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -148,10 +155,36 @@ public class Interfaz13 extends javax.swing.JFrame {
     private void cmdBOrrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBOrrarActionPerformed
         txtValor.setText("");
         txtDias.setText("");
-        txtPelis.setText("");
+        txtPers.setText("");
 
-        txtPelis.requestFocusInWindow();
+        txtPers.requestFocusInWindow();
     }//GEN-LAST:event_cmdBOrrarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       String res1;
+       long op1, op2, op3,dias,per,op4;
+       if (txtPers.getText().trim().isEmpty() ){
+            JOptionPane.showMessageDialog(this,"Por favor digiete La cantida de peliculas","Error",JOptionPane.ERROR_MESSAGE);
+            txtPers.requestFocusInWindow();
+        }else if (txtDias.getText().trim().isEmpty() ){
+            JOptionPane.showMessageDialog(this,"Por favor digiete el numero de dias","Error",JOptionPane.ERROR_MESSAGE);
+            txtDias.requestFocusInWindow();
+        }else{
+          
+               per= Long.parseLong(txtPers.getText());
+               dias= Long.parseLong(txtDias.getText());
+                 op1=per*25000;
+                    op2=op1*dias ;
+                    op3=(op2*12)/100;
+                    op4=op2+op3;
+                 res1=String.valueOf(op4);
+                 
+                 txtValor.setText(res1);
+        
+           
+                   }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
